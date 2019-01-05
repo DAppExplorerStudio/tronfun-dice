@@ -1,0 +1,12 @@
+{
+  "contractName": "Dice",
+  "abi": [
+  ],
+  "networks": {
+    "*": {
+      "events": {},
+      "links": {},
+      "address": ""
+    }
+  }
+}

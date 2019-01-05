@@ -1,0 +1,40 @@
+{
+  "name": "dice",
+  "version": "1.0.0",
+  "description": "Dice project",
+  "author": "ttk",
+  "private": true,
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-dice-node",
+    "stop": "egg-scripts stop --title=egg-server-dice-node",
+    "dev": "egg-bin dev",
+    "webpack:dev": "webpack-dev-server --inline --progress --config webpack.config/webpack.dev.conf.js",
+    "build:dev": "npm run webpack:dev",
+    "build:prod": "node webpack.config/build.js",
+    "deploy:contract:development": "rm -rf build/ && tronbox migrate --network development"
+  },
+  "dependencies": {
+    "bignumber.js": "^7.2.1",
+    "dayjs": "^1.7.7",
+    "egg": "2.9.1",
+    "egg-cors": "^2.1.2",
+    "egg-mongoose": "^3.1.0",
+    "egg-scripts": "^2.5.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "lodash": "^4.17.11",
+    "md5": "^2.2.1",
+    "pako": "^1.0.7",
+    "tronweb": "^2.1.9",
+    "uuid": "^3.3.2",
+    "ws": "^6.1.2"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
